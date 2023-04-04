@@ -1,0 +1,165 @@
+[
+    {
+        "tbName": "images",
+        "fields": [
+            {
+                "fieldName": "id",
+                "isPK": true,
+                "type": "INTEGER"
+            },
+            {
+                "fieldName": "name",
+                "type": "TEXT"
+            },
+            {
+                "fieldName": "file",
+                "type": "BLOB"
+            }
+        ]
+    },
+    {
+        "tbName": "species",
+        "fields": [
+            {
+                "fieldName": "id",
+                "isPK": true,
+                "type": "INTEGER",
+                "propertyPath": ["cid"]
+            },
+            {
+                "fieldName": "origin_id",                
+                "type": "INTEGER",
+                "propertyPath": ["id"]
+            },
+            {
+                "fieldName": "name_cn",
+                "type": "TEXT",
+                "propertyPath": ["name","cn"]
+            },
+            {
+                "fieldName": "name_lt",
+                "type": "TEXT",
+                "propertyPath": ["name","lt"]
+            },
+            {
+                "fieldName": "name_en",
+                "type": "TEXT",
+                "propertyPath": ["name","py"]
+            },
+          
+            {
+                "fieldName": "protection_npl",
+                "type": "TEXT",
+                "propertyPath": ["protection","npl"]
+            },
+            {
+                "fieldName": "protection_cites",
+                "type": "TEXT",
+                "propertyPath": ["protection","cites"]
+            },
+            {
+                "fieldName": "protection_iucn",
+                "type": "TEXT",
+                "propertyPath": ["protection","iucn"]
+            },
+            {
+                "fieldName": "protection_iucn_cn",
+                "type": "TEXT",
+                "propertyPath": ["protection","iucn_cn"]
+            },
+            {
+                "fieldName": "protection_cnbd",
+                "type": "TEXT",
+                "propertyPath": ["protection","cnbd"]
+            },
+            {
+                "fieldName": "protection_desc",
+                "type": "TEXT",
+                "propertyPath": ["protection","desc"]
+            },
+            {
+                "fieldName": "protection_cnbd_en",
+                "type": "TEXT",
+                "propertyPath": ["protection","cnbd_en"]
+            },
+
+            {
+                "fieldName": "category_yu",
+                "type": "TEXT",
+                "propertyPath": ["category_chain","yu"]
+            },
+            {
+                "fieldName": "category_jie",
+                "type": "TEXT",
+                "propertyPath": ["category_chain","jie"]
+            },
+            {
+                "fieldName": "category_men",
+                "type": "TEXT",
+                "propertyPath": ["category_chain","men"]
+            },
+            {
+                "fieldName": "category_gang",
+                "type": "TEXT",
+                "propertyPath": ["category_chain","gang"]
+            },
+            {
+                "fieldName": "category_mu",
+                "type": "TEXT",
+                "propertyPath": ["category_chain","mu"]
+            },
+            {
+                "fieldName": "category_ke",
+                "type": "TEXT",
+                "propertyPath": ["category_chain","ke"]
+            },
+
+
+            {
+                "fieldName": "desc_distinguish",
+                "type": "TEXT",
+                "propertyPath": ["distinguish"]
+            },
+            {
+                "fieldName": "desc_distribution",
+                "type": "TEXT",
+                "propertyPath": ["distribution"]
+            },
+            {
+                "fieldName": "desc_habit",
+                "type": "TEXT",
+                "propertyPath": ["habit"]
+            },           
+            {
+                "fieldName": "desc_scattergram",
+                "type": "TEXT",
+                "propertyPath": ["scattergram", "desc"]
+            },            
+
+
+            {
+                "fieldName": "json",
+                "type": "TEXT",
+                "propertyPath": ["json"]
+            }          
+        ]
+    },
+    {
+        "tbName": "species_images",
+        "fields": [
+            {
+                "fieldName": "id",
+                "isPK": true,
+                "type": "INTEGER"
+            },
+            {
+                "fieldName": "species_id",
+                "type": "INTEGER"
+            },
+            {
+                "fieldName": "image_id",
+                "type": "INTEGER"
+            }
+        ]
+    }
+]
