@@ -1,0 +1,221 @@
+[
+    {
+        "tbName": "images",
+        "fields": [
+            {
+                "fieldName": "id",
+                "isPK": true,
+                "type": "INTEGER"
+            },
+            {
+                "fieldName": "name",
+                "type": "TEXT"
+            },
+            {
+                "fieldName": "file",
+                "type": "BLOB"
+            }
+        ]
+    },
+    {
+        "tbName": "species",
+        "fields": [
+            {
+                "fieldName": "id",
+                "isPK": true,
+                "type": "INTEGER",
+                "propertyPath": [
+                    "cid"
+                ]
+            },
+            {
+                "fieldName": "origin_id",
+                "type": "TEXT",
+                "propertyPath": [
+                    "info",
+                    "id"
+                ]
+            },
+            {
+                "fieldName": "name_cn",
+                "type": "TEXT",
+                "propertyPath": [
+                    "info",
+                    "chName"
+                ],
+                "formator": [
+                    [
+                        "replace",
+                        "<em>",
+                        ""
+                    ],
+                    [
+                        "replace",
+                        "</em>",
+                        ""
+                    ]
+                ]
+            },
+            {
+                "fieldName": "name_sci",
+                "type": "TEXT",
+                "propertyPath": [
+                    "info",
+                    "sciName"
+                ],
+                "formator": [
+                    [
+                        "replace",
+                        "<em>",
+                        ""
+                    ],
+                    [
+                        "replace",
+                        "</em>",
+                        ""
+                    ]
+                ]
+            },
+            {
+                "fieldName": "name_can",
+                "type": "TEXT",
+                "propertyPath": [
+                    "info",
+                    "canName"
+                ],
+                "formator": [
+                    [
+                        "replace",
+                        "<em>",
+                        ""
+                    ],
+                    [
+                        "replace",
+                        "</em>",
+                        ""
+                    ]
+                ]
+            },
+            {
+                "fieldName": "acc_status",
+                "type": "TEXT",
+                "propertyPath": [
+                    "info",
+                    "taxon",
+                    "acc_sttatus"
+                ]
+            },
+            {
+                "fieldName": "category_phy",
+                "type": "TEXT",
+                "propertyPath": [
+                    "info",
+                    "taxon",
+                    "phylum"
+                ]
+            },
+            {
+                "fieldName": "category_genus",
+                "type": "TEXT",
+                "propertyPath": [
+                    "info",
+                    "taxon",
+                    "genus"
+                ]
+            },
+            {
+                "fieldName": "category_family",
+                "type": "TEXT",
+                "propertyPath": [
+                    "info",
+                    "taxon",
+                    "family"
+                ]
+            },
+            {
+                "fieldName": "category_phy_zh",
+                "type": "TEXT",
+                "propertyPath": [
+                    "info",
+                    "taxon",
+                    "phylum_c"
+                ]
+            },
+            {
+                "fieldName": "category_genus_zh",
+                "type": "TEXT",
+                "propertyPath": [
+                    "info",
+                    "taxon",
+                    "genus_c"
+                ]
+            },
+            {
+                "fieldName": "category_family_zh",
+                "type": "TEXT",
+                "propertyPath": [
+                    "info",
+                    "taxon",
+                    "family_c"
+                ]
+            },
+            {
+                "fieldName": "desc_distribution",
+                "type": "TEXT",
+                "propertyPath": [
+                    "info",
+                    "distribution_c"
+                ]
+            },
+            {
+                "fieldName": "desc_locality",
+                "type": "TEXT",
+                "propertyPath": [
+                    "trait",
+                    "locality"
+                ]
+            },
+            {
+                "fieldName": "desc_reference",
+                "type": "TEXT",
+                "propertyPath": [
+                    "trait",
+                    "reference"
+                ]
+            },
+            {
+                "fieldName": "desc_trait",
+                "type": "TEXT",
+                "propertyPath": [
+                    "trait",
+                    "trait"
+                ]
+            },
+            {
+                "fieldName": "json",
+                "type": "TEXT",
+                "propertyPath": [
+                    "json"
+                ]
+            }
+        ]
+    },
+    {
+        "tbName": "species_images",
+        "fields": [
+            {
+                "fieldName": "id",
+                "isPK": true,
+                "type": "INTEGER"
+            },
+            {
+                "fieldName": "species_id",
+                "type": "INTEGER"
+            },
+            {
+                "fieldName": "image_id",
+                "type": "INTEGER"
+            }
+        ]
+    }
+]
