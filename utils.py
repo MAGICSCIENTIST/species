@@ -31,9 +31,24 @@ def mkdir(path):
         print(path+' 目录已存在')
         return False
 
+# 递归遍历文件夹
+def listFile(path, endwith=".json"):
+    res = []
+    for root, dirs, files in os.walk(path):
+        for file in files:
+            if filter is not None:
+                if(file.endswith(endwith)):
+                    res.append(os.path.join(root, file))
+            else:
+                res.append(os.path.join(root, file))            
+    return res
+
+
 def writeFile(file, data):
     with open(file, 'w', encoding="utf-8") as f:
         f.write(data)      
 def writeImage(file, data):
     with open(file, 'wb') as f:
         f.write(data)
+
+

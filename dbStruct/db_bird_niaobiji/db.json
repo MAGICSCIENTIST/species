@@ -1,0 +1,161 @@
+[
+    {
+        "tbName": "images",
+        "fields": [
+            {
+                "fieldName": "id",
+                "isPK": true,
+                "type": "INTEGER"
+            },
+            {
+                "fieldName": "name",
+                "type": "TEXT"
+            },
+            {
+                "fieldName": "file",
+                "type": "BLOB"
+            }
+        ]
+    },
+    {
+        "tbName": "species",
+        "fields": [
+            {
+                "fieldName": "id",
+                "isPK": true,
+                "type": "INTEGER",
+                "propertyPath": ["cid"]
+            },
+            {
+                "fieldName": "origin_id",                
+                "type": "INTEGER",
+                "propertyPath": ["id"]
+            },
+            {
+                "fieldName": "name_cn",
+                "type": "TEXT",
+                "propertyPath": ["name"]
+            },
+            {
+                "fieldName": "name_lt",
+                "type": "TEXT",
+                "propertyPath": ["name_alia"]
+            },
+            {
+                "fieldName": "name_en",
+                "type": "TEXT",
+                "propertyPath": ["name_en"]
+            },
+          
+           
+
+     
+            {
+                "fieldName": "category_gang",
+                "type": "TEXT",
+                "propertyPath": ["name_gang"]
+            },
+            {
+                "fieldName": "category_mu",
+                "type": "TEXT",
+                "propertyPath": ["name_mu"]
+            },
+            {
+                "fieldName": "category_ke",
+                "type": "TEXT",
+                "propertyPath": ["name_ke"]
+            },
+            {
+                "fieldName": "category_shu",
+                "type": "TEXT",
+                "propertyPath": ["name_shu"]
+            },
+       
+            {
+                "fieldName": "info_symbol",
+                "type": "TEXT",
+                "propertyPath": ["info_symbol"]
+            },
+            {
+                "fieldName": "info_voice",
+                "type": "TEXT",
+                "propertyPath": ["info_voice"]
+            },
+            {
+                "fieldName": "info_area",
+                "type": "TEXT",
+                "propertyPath": ["info_area"]
+            },
+            {
+                "fieldName": "info_area_status",
+                "type": "TEXT",
+                "propertyPath": ["info_area_status"]
+            },
+            {
+                "fieldName": "info_habit",
+                "type": "TEXT",
+                "propertyPath": ["info_habit"]
+            },
+            {
+                "fieldName": "extra",
+                "type": "TEXT",
+                "propertyPath": ["info_lunaname"]
+            },
+
+
+            {
+                "fieldName": "desc_distinguish",
+                "type": "TEXT",
+                "propertyPath": ["describe_symbol"]
+            },
+            {
+                "fieldName": "desc_distribution",
+                "type": "TEXT",
+                "propertyPath": ["describe_area"]
+            },
+            {
+                "fieldName": "desc_habit",
+                "type": "TEXT",
+                "propertyPath": ["describe_habit"]
+            },     
+            
+            
+            {
+                "fieldName": "headImage",
+                "type": "TEXT",
+                "propertyPath": ["headImage"]
+            },            
+
+
+            {
+                "fieldName": "json",
+                "type": "TEXT",
+                "propertyPath": ["json"]
+            },
+            {
+                "fieldName": "html",
+                "type": "TEXT",
+                "propertyPath": ["html"]
+            }          
+            
+        ]
+    },
+    {
+        "tbName": "species_images",
+        "fields": [
+            {
+                "fieldName": "id",
+                "isPK": true,
+                "type": "INTEGER"
+            },
+            {
+                "fieldName": "species_id",
+                "type": "INTEGER"
+            },
+            {
+                "fieldName": "image_id",
+                "type": "INTEGER"
+            }
+        ]
+    }
+]
