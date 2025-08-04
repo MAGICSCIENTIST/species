@@ -1,0 +1,123 @@
+[
+    {
+        "tbName": "images",
+        "fields": [
+            {
+                "fieldName": "id",
+                "isPK": true,
+                "type": "INTEGER"
+            },
+            {
+                "fieldName": "name",
+                "type": "TEXT"
+            },
+            {
+                "fieldName": "file",
+                "type": "BLOB"
+            }
+        ]
+    },
+    {
+        "tbName": "report",
+        "fields": [
+            {
+                "fieldName": "id",
+                "isPK": true,
+                "type": "INTEGER",
+                "propertyPath": ["cid"]
+            },
+            {
+                "fieldName": "origin_id",                
+                "type": "INTEGER",
+                "propertyPath": ["id"]
+            },
+            {
+                "fieldName": "title",
+                "type": "TEXT",
+                "propertyPath": ["title"]
+            },
+            {
+                "fieldName": "paperTitle",
+                "type": "TEXT",
+                "propertyPath": ["paperTitle"]
+            },
+            {
+                "fieldName": "date",
+                "type": "TEXT",
+                "propertyPath": ["date"]
+            },
+            {
+                "fieldName": "org",
+                "type": "TEXT",
+                "propertyPath": ["org"]
+            },
+          
+            {
+                "fieldName": "location",
+                "type": "TEXT",
+                "propertyPath": ["location"]
+            },
+            {
+                "fieldName": "method",
+                "type": "TEXT",
+                "propertyPath": ["method"]
+            },
+            {
+                "fieldName": "pieces",
+                "type": "TEXT",
+                "propertyPath": ["pieces"]
+            },
+            {
+                "fieldName": "transport",
+                "type": "TEXT",
+                "propertyPath": ["transport"]
+            },
+            {
+                "fieldName": "reson",
+                "type": "TEXT",
+                "propertyPath": ["reson"]
+            },
+            {
+                "fieldName": "page",
+                "type": "INTEGER",
+                "propertyPath": ["page"]
+            },
+            {
+                "fieldName": "filePath",
+                "type": "TEXT",
+                "propertyPath": ["filePath"]
+            },
+            {
+                "fieldName": "raw",
+                "type": "TEXT",
+                "propertyPath": ["raw"]
+            },
+                
+
+
+            {
+                "fieldName": "json",
+                "type": "TEXT",
+                "propertyPath": ["json"]
+            }          
+        ]
+    },
+    {
+        "tbName": "report_images",
+        "fields": [
+            {
+                "fieldName": "id",
+                "isPK": true,
+                "type": "INTEGER"
+            },
+            {
+                "fieldName": "report_id",
+                "type": "INTEGER"
+            },
+            {
+                "fieldName": "image_id",
+                "type": "INTEGER"
+            }
+        ]
+    }
+]
